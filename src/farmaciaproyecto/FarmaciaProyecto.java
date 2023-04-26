@@ -4,8 +4,10 @@
  */
 package farmaciaproyecto;
 
+import controlador.ControladorPedido;
 import modelo.ConexionBD;
 import modelo.ModeloPedido;
+import vista.JFInfoPedido;
 
 /**
  *
@@ -18,7 +20,9 @@ public class FarmaciaProyecto {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-      
+        JFInfoPedido mivista = new JFInfoPedido();
+        ModeloPedido modeloP = new ModeloPedido();
+        ControladorPedido controlerP = new ControladorPedido(modeloP, mivista);
     }
     
 }

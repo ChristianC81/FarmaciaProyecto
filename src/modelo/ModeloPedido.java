@@ -18,17 +18,13 @@ public class ModeloPedido {
     //Variable conexion
     ConexionBD conn = new ConexionBD();
     
-    public void crearPedido(Pedido nuevoPedido){
-        
-         // ArrayList de pedido
-    ArrayList<Pedido> pedidos = new ArrayList<Pedido>();
-    pedidos.add(nuevoPedido);
-   
+    public void crearPedido( ArrayList<Pedido> pedidos){
     // Insertar personas en la base de datos
     for (Pedido p : pedidos) {
       try {
         String sql = "INSERT INTO pedido (nombredelmedicamento, tipodemedicamento,cantidadproducto,distribuidorfarmaceutico,sucursaldelafarmacia) VALUES (?, ?, ?, ?, ?)";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
+        //Asignación de valores a la sentencia en base a los datos recorridos del arraylist
         stmt.setString(1, p.getNombredelmedicamento());
         stmt.setString(2, p.getTipodemedicamento());
         stmt.setInt(3, p.getCantidadproducto());
