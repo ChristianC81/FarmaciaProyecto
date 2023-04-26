@@ -33,11 +33,11 @@ public class ControladorPedido {
     public void guardarPedido() {
 
         //Variables de la vista
-        String nombredelmedicamento = vista.getTxtnombreMedicamento().toString();
+        String nombredelmedicamento = vista.getTxtnombreMedicamento().getText().toString();
         
         String tipodemedicamento = (String) vista.getCbxTipoMedicamento().getSelectedItem();
         
-        int cantidadproducto = Integer.valueOf(vista.getTxtnombreMedicamento().toString());
+        int cantidadproducto = Integer.parseInt(vista.getTxtCantidadProducto().getText().toString());
         
         String distribuidorfarmaceutico = "";
         if (vista.getRbtnCemefar().isSelected()) {
