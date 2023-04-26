@@ -123,6 +123,10 @@ public class JFInfoPedido extends javax.swing.JFrame {
     private void initComponents() {
 
         btnGDistribuidor = new javax.swing.ButtonGroup();
+        jDialog1 = new javax.swing.JDialog();
+        lblPedido = new javax.swing.JLabel();
+        btnGuardar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         txtnombreMedicamento = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -138,6 +142,41 @@ public class JFInfoPedido extends javax.swing.JFrame {
         chbxSucSecundaria = new javax.swing.JCheckBox();
         cbxTipoMedicamento = new javax.swing.JComboBox<>();
         btnVerificarDatos = new javax.swing.JButton();
+
+        jDialog1.setPreferredSize(new java.awt.Dimension(482, 325));
+
+        lblPedido.setText("jLabel2");
+
+        btnGuardar.setText("Guardar");
+
+        btnCancelar.setText("Cancelar");
+
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog1Layout.createSequentialGroup()
+                .addGap(86, 86, 86)
+                .addComponent(btnGuardar)
+                .addGap(92, 92, 92)
+                .addComponent(btnCancelar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog1Layout.createSequentialGroup()
+                .addContainerGap(56, Short.MAX_VALUE)
+                .addComponent(lblPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(52, 52, 52))
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog1Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(lblPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnGuardar)
+                    .addComponent(btnCancelar))
+                .addContainerGap(44, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -171,6 +210,11 @@ public class JFInfoPedido extends javax.swing.JFrame {
         cbxTipoMedicamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<< Seleccione >>", "Analgésico", "Analéptico", "Anestésico", "Antiácido", "Antidepresivo", "Antibióticos" }));
 
         btnVerificarDatos.setText("OK");
+        btnVerificarDatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerificarDatosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -252,6 +296,14 @@ public class JFInfoPedido extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnVerificarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarDatosActionPerformed
+        // TODO add your handling code here:
+     
+        jDialog1.setLocationRelativeTo(null);
+        jDialog1.setSize(482, 325);
+        jDialog1.show();
+    }//GEN-LAST:event_btnVerificarDatosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -288,17 +340,21 @@ public class JFInfoPedido extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancelar;
     private javax.swing.ButtonGroup btnGDistribuidor;
+    private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnVerificarDatos;
     private javax.swing.JComboBox<String> cbxTipoMedicamento;
     private javax.swing.JCheckBox chbxSucPrincipal;
     private javax.swing.JCheckBox chbxSucSecundaria;
+    private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblPedido;
     private javax.swing.JRadioButton rbtnCemefar;
     private javax.swing.JRadioButton rbtnDisCofarma;
     private javax.swing.JRadioButton rbtnEmpsephar;
