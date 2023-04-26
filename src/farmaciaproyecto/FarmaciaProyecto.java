@@ -4,6 +4,9 @@
  */
 package farmaciaproyecto;
 
+import modelo.ConexionBD;
+import modelo.ModeloPedido;
+
 /**
  *
  * @author chris
@@ -15,6 +18,7 @@ public class FarmaciaProyecto {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+      
     }
     
 }

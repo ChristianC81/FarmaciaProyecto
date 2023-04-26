@@ -19,8 +19,7 @@ public class Pedido {
     public Pedido() {
     }
 
-    public Pedido(int idpedido, String nombredelmedicamento, String tipodemedicamento, int cantidadproducto, String distribuidorfarmaceutico, String sucursaldelafarmacia) {
-        this.idpedido = idpedido;
+    public Pedido(String nombredelmedicamento, String tipodemedicamento, int cantidadproducto, String distribuidorfarmaceutico, String sucursaldelafarmacia) {
         this.nombredelmedicamento = nombredelmedicamento;
         this.tipodemedicamento = tipodemedicamento;
         this.cantidadproducto = cantidadproducto;
