@@ -8,6 +8,8 @@ import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
@@ -111,6 +113,38 @@ public class JFInfoPedido extends javax.swing.JFrame {
 
     public void setTxtnombreMedicamento(JTextField txtnombreMedicamento) {
         this.txtnombreMedicamento = txtnombreMedicamento;
+    }
+
+    public JButton getBtnCancelar() {
+        return btnCancelar;
+    }
+
+    public void setBtnCancelar(JButton btnCancelar) {
+        this.btnCancelar = btnCancelar;
+    }
+
+    public JButton getBtnGuardar() {
+        return btnGuardar;
+    }
+
+    public void setBtnGuardar(JButton btnGuardar) {
+        this.btnGuardar = btnGuardar;
+    }
+
+    public JDialog getjDialog1() {
+        return jDialog1;
+    }
+
+    public void setjDialog1(JDialog jDialog1) {
+        this.jDialog1 = jDialog1;
+    }
+
+    public JLabel getLblPedido() {
+        return lblPedido;
+    }
+
+    public void setLblPedido(JLabel lblPedido) {
+        this.lblPedido = lblPedido;
     }
 
     /**
@@ -303,7 +337,7 @@ public class JFInfoPedido extends javax.swing.JFrame {
         jDialog1.setSize(482, 325);
         jDialog1.show();
     }//GEN-LAST:event_btnVerificarDatosActionPerformed
-
+   
     /**
      * @param args the command line arguments
      */
