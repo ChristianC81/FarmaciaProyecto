@@ -7,6 +7,7 @@ package modelo;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -15,13 +16,14 @@ import java.util.logging.Logger;
  * @author chris
  */
 public class ConexionBD {
+    Statement stm;
+    Connection conn;
 
-    public Connection obtenerConexion() {
+    public Connection getConnection() {
         // Conexión a la base de datos
-        Connection conn = null;
-        String url = "jdbc:mysql://localhost:3306/mydatabase";
+        String url = "jdbc:mysql://localhost:3306/farmaciaproyectobd";
         String user = "root";
-        String password = "mypassword";
+        String password = "";
         try {
             conn = DriverManager.getConnection(url, user, password);
             System.out.println("Conexión establecida");
