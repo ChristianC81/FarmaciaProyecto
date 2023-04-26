@@ -177,8 +177,6 @@ public class JFInfoPedido extends javax.swing.JFrame {
         cbxTipoMedicamento = new javax.swing.JComboBox<>();
         btnVerificarDatos = new javax.swing.JButton();
 
-        jDialog1.setPreferredSize(new java.awt.Dimension(482, 325));
-
         lblPedido.setText("jLabel2");
 
         btnGuardar.setText("Guardar");
@@ -214,13 +212,15 @@ public class JFInfoPedido extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        txtnombreMedicamento.setText("jTextField1");
+        txtnombreMedicamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtnombreMedicamentoActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Nombre del medicamento:");
 
         jLabel2.setText("Tipo de medicamento:");
-
-        txtCantidadProducto.setText("jTextField3");
 
         jLabel3.setText("Cantidad de producto:");
 
@@ -337,6 +337,10 @@ public class JFInfoPedido extends javax.swing.JFrame {
         jDialog1.setSize(482, 325);
         jDialog1.show();
     }//GEN-LAST:event_btnVerificarDatosActionPerformed
+
+    private void txtnombreMedicamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnombreMedicamentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtnombreMedicamentoActionPerformed
    
     /**
      * @param args the command line arguments
