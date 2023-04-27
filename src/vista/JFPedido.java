@@ -5,6 +5,7 @@
 package vista;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 
 /**
  *
@@ -35,6 +36,14 @@ public class JFPedido extends javax.swing.JFrame {
         this.btnGuardar = btnGuardar;
     }
 
+    public JLabel getLblPedido() {
+        return lblPedido;
+    }
+
+    public void setLblPedido(JLabel lblPedido) {
+        this.lblPedido = lblPedido;
+    }
+
     
     
     
@@ -51,8 +60,6 @@ public class JFPedido extends javax.swing.JFrame {
         btnGuardar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         lblPedido = new javax.swing.JLabel();
-        lblPedido1 = new javax.swing.JLabel();
-        lblPedido2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,12 +75,6 @@ public class JFPedido extends javax.swing.JFrame {
         lblPedido.setForeground(new java.awt.Color(255, 255, 255));
         lblPedido.setText("cjnamk,ls.ñ{-dfvgjnmklñ");
 
-        lblPedido1.setForeground(new java.awt.Color(255, 255, 255));
-        lblPedido1.setText("cjnamk,ls.ñ{-dfvgjnmklñ");
-
-        lblPedido2.setForeground(new java.awt.Color(255, 255, 255));
-        lblPedido2.setText("cjnamk,ls.ñ{-dfvgjnmklñ");
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -86,10 +87,7 @@ public class JFPedido extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(53, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(lblPedido2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblPedido, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblPedido1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lblPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50))
         );
         jPanel2Layout.setVerticalGroup(
@@ -97,11 +95,7 @@ public class JFPedido extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(36, Short.MAX_VALUE)
                 .addComponent(lblPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblPedido2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblPedido1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(96, 96, 96)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardar)
                     .addComponent(btnCancelar))
@@ -162,7 +156,5 @@ public class JFPedido extends javax.swing.JFrame {
     private javax.swing.JButton btnGuardar;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblPedido;
-    private javax.swing.JLabel lblPedido1;
-    private javax.swing.JLabel lblPedido2;
     // End of variables declaration//GEN-END:variables
 }
