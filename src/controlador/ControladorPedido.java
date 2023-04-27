@@ -20,6 +20,8 @@ public class ControladorPedido {
     ModeloPedido modelo;
     JFInfoPedido vista;
     JFPedido vistaConf;
+    int numeroPed;
+    String detpedido;
 
     public ControladorPedido(ModeloPedido modelo, JFInfoPedido vista) {
         this.modelo = modelo;
@@ -71,8 +73,9 @@ public class ControladorPedido {
                 ArrayList<Pedido> mipedido = new ArrayList<>();
                 mipedido.add(new Pedido(nombredelmedicamento, tipodemedicamento, cantidadproducto, distribuidorfarmaceutico, sucursaldelafarmacia));
 
-                vistaConf.setTitle("PEDIDO AL DISTRIBUIDOR "+distribuidorfarmaceutico);
-                vistaConf.getLblPedidoMedicamentos().setText("<html>" + cantidadproducto + " unidad/es del " + tipodemedicamento + " " + nombredelmedicamento + " " + "para la Farmacia situada en " + direccionsuc + " :D <html>");
+                vistaConf.setTitle("PEDIDO AL DISTRIBUIDOR " + distribuidorfarmaceutico);
+                detpedido ="<html> "+ cantidadproducto + " unidad/es del " + tipodemedicamento + " " + nombredelmedicamento + " " + "para la Farmacia situada en " + direccionsuc + " :D <html>";
+                vistaConf.getLblPedidoMedicamentos().setText(detpedido);
                 vistaConf.setLocationRelativeTo(null);
                 vistaConf.setVisible(true);
                 vistaConf.getBtnGuardar().addActionListener(l -> guardarPedido(mipedido));
@@ -89,8 +92,15 @@ public class ControladorPedido {
     public void guardarPedido(ArrayList<Pedido> pedido) {
         modelo.crearPedido(pedido);
         JOptionPane.showMessageDialog(null, "Pedido Enviado");
-        vistaConf.dispose();
+        vistaConf.getLblPedidoMedicamentos().setText("<html> Número de pedido: " + obtenerIndicePedido(pedido) + "<br>"+detpedido);
         limpiarCampos();
+    }
+
+    public int obtenerIndicePedido(ArrayList<Pedido> pedido) {
+        int indice;
+        indice = pedido.size();
+        return indice;
+
     }
 
     public void cancelarProducto(ArrayList<Pedido> pedido) {
