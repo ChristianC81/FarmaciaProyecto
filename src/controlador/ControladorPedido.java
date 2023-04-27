@@ -70,14 +70,13 @@ public class ControladorPedido {
                 // ArrayList de pedido 
                 ArrayList<Pedido> mipedido = new ArrayList<>();
                 mipedido.add(new Pedido(nombredelmedicamento, tipodemedicamento, cantidadproducto, distribuidorfarmaceutico, sucursaldelafarmacia));
-             
+
                 vistaConf.setTitle(distribuidorfarmaceutico);
-                vistaConf.getLblPedidoMedicamentos().setText(cantidadproducto + " de unidades, " + tipodemedicamento + " " + nombredelmedicamento);
-                vistaConf.getLblPedidoDireccion().setText( "Para la Farmacia situada en "+direccionsuc+" :D");
+                vistaConf.getLblPedidoMedicamentos().setText("<html>" + cantidadproducto + " unidad/es del " + tipodemedicamento + " " + nombredelmedicamento + " " + "para la Farmacia situada en " + direccionsuc + " :D <html>");
                 vistaConf.setLocationRelativeTo(null);
                 vistaConf.setVisible(true);
-                vistaConf.getBtnGuardar().addActionListener(l->guardarPedido(mipedido));
-                vistaConf.getBtnCancelar().addActionListener(l->cancelarProducto(mipedido));
+                vistaConf.getBtnGuardar().addActionListener(l -> guardarPedido(mipedido));
+                vistaConf.getBtnCancelar().addActionListener(l -> cancelarProducto(mipedido));
 
             }
         } catch (Exception e) {
@@ -85,20 +84,23 @@ public class ControladorPedido {
             limpiarCampos();
             System.out.println(e.getMessage());
         }
-    }   
-    public void guardarPedido( ArrayList<Pedido> pedido){
-           modelo.crearPedido(pedido);
-           JOptionPane.showMessageDialog(null, "Pedido Enviado");
-           limpiarCampos();
     }
-    public void cancelarProducto(ArrayList<Pedido> pedido){
-           pedido.remove(pedido.size()-1);
-           if(pedido.isEmpty()){
-               System.out.println("No hay pedidos en el arraylist");
-           }
-           //limpiarCampos();
-           vistaConf.dispose();  
+
+    public void guardarPedido(ArrayList<Pedido> pedido) {
+        modelo.crearPedido(pedido);
+        JOptionPane.showMessageDialog(null, "Pedido Enviado");
+        limpiarCampos();
     }
+
+    public void cancelarProducto(ArrayList<Pedido> pedido) {
+        pedido.remove(pedido.size() - 1);
+        if (pedido.isEmpty()) {
+            System.out.println("No hay pedidos en el arraylist");
+        }
+        //limpiarCampos();
+        vistaConf.dispose();
+    }
+
     public boolean validarCampos() {
         boolean validado = false;
         Validaciones validar = new Validaciones();
@@ -133,7 +135,8 @@ public class ControladorPedido {
         }
         return validado;
     }
-    public void limpiarCampos(){
+
+    public void limpiarCampos() {
         vista.getTxtnombreMedicamento().setText("");
         vista.getCbxTipoMedicamento().setSelectedIndex(0);
         vista.getTxtCantidadProducto().setText("");
