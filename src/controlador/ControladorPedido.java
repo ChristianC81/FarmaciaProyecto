@@ -120,7 +120,7 @@ public class ControladorPedido {
                                 JOptionPane.showMessageDialog(vista, "Es necesario seleccionar un Distribuidor farmaceútico");
                             }
                         } else {
-                            JOptionPane.showMessageDialog(vista, "Es necesario ingresar un numero mayor a 0");
+                            JOptionPane.showMessageDialog(vista, "Es necesario ingresar una cantidad mayor a 0");
                         }
                     } else {
                         JOptionPane.showMessageDialog(vista, "Es necesario ingresar una cantidad del producto");
