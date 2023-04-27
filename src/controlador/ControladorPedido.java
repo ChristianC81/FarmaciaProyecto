@@ -71,7 +71,7 @@ public class ControladorPedido {
                 ArrayList<Pedido> mipedido = new ArrayList<>();
                 mipedido.add(new Pedido(nombredelmedicamento, tipodemedicamento, cantidadproducto, distribuidorfarmaceutico, sucursaldelafarmacia));
 
-                vistaConf.setTitle(distribuidorfarmaceutico);
+                vistaConf.setTitle("PEDIDO AL DISTRIBUIDOR "+distribuidorfarmaceutico);
                 vistaConf.getLblPedidoMedicamentos().setText("<html>" + cantidadproducto + " unidad/es del " + tipodemedicamento + " " + nombredelmedicamento + " " + "para la Farmacia situada en " + direccionsuc + " :D <html>");
                 vistaConf.setLocationRelativeTo(null);
                 vistaConf.setVisible(true);
