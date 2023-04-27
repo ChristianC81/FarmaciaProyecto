@@ -88,6 +88,7 @@ public class ControladorPedido {
     }   
     public void guardarPedido( ArrayList<Pedido> pedido){
            modelo.crearPedido(pedido);
+           JOptionPane.showMessageDialog(null, "Pedido Enviado");
            limpiarCampos();
     }
     public void cancelarProducto(ArrayList<Pedido> pedido){
@@ -95,10 +96,8 @@ public class ControladorPedido {
            if(pedido.isEmpty()){
                System.out.println("No hay pedidos en el arraylist");
            }
-           limpiarCampos();
-           vistaConf.dispose();
-         
-           
+           //limpiarCampos();
+           vistaConf.dispose();  
     }
     public boolean validarCampos() {
         boolean validado = false;

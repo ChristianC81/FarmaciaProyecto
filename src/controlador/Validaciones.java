@@ -26,7 +26,7 @@ public class Validaciones {
     public boolean esNumeroPositivo(String texto) {
     try {
         int numero = Integer.parseInt(texto);
-        if (numero >= 0) {
+        if (numero >0) {
             return true;
         } else {
             return false;

@@ -5,7 +5,6 @@
 package farmaciaproyecto;
 
 import controlador.ControladorPedido;
-import modelo.ConexionBD;
 import modelo.ModeloPedido;
 import vista.JFInfoPedido;
 
