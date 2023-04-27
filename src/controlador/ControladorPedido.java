@@ -89,6 +89,7 @@ public class ControladorPedido {
     public void guardarPedido(ArrayList<Pedido> pedido) {
         modelo.crearPedido(pedido);
         JOptionPane.showMessageDialog(null, "Pedido Enviado");
+        vistaConf.dispose();
         limpiarCampos();
     }
 
